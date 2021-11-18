@@ -1,0 +1,412 @@
+{% include "p-top-1" %}
+{% include "p-top-2" %}
+{% include "p-top-3" %}
+<style>
+  #shopify-section-header_main, #shopify-section-announcement-bar, #shopify-section-top-bar{
+    display:none;
+  }
+</style>
+<section class="checkout-step page-template checkout–step-2-page smile-your-teeth-page">
+
+
+  <section class="checkout-step-sec show-desktop">
+    <div class="container">
+      <div class="step-border-div"></div>
+      <div class="row check-out-step-row">
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+            Suitability </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  active
+                    ">
+            Your teeth </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+            Products </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+            Your details </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="checkout-step-sec show-mobile checkout-step-sec-mob">
+    <div class="back-arrow-mobile">
+      <a onclick="ToggleLoading();" href="/pages/smile-assessment-1">
+        <img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+      </a>
+    </div>
+    <div class="container">
+      <div class="step-border-div"></div>
+      <div class="row check-out-step-row">
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  active
+                    ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="checkout-tittle-sec  checkout-1-title-sec
+                  ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 back-btn-clmn show-desktop">
+          <a class="btn-back-go  btn
+                    " onclick="ToggleLoading();" href="/pages/smile-assessment-1">
+            <img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+            Back
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 checkout-title-clmn">
+          <h1>About your teeth</h1>
+        </div>
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="checkout-2-sec-1 checkout-section">
+    <div class="container">
+      <div class="row check-2-row">
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 check-2-clmn check-2-clmn-1">
+        </div>
+
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 check-2-clmn check-2-clmn-2">
+          <form method="post" id="submitArch" >
+            <div class="checkout-2-left-content">
+
+              <div class="row check-2-inner-row-1 check-2-inner-row">
+                <div class="col-12 check-2-inner-clmn">
+                  <h2 class="checkout_h2">Which teeth do you want to cover?</h2>
+                </div>
+              </div>
+
+
+              <div class="row check-2-inner-row-2 check-2-inner-row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                  <input type="radio" name="SelectedArch" class="d-none" id="archKey-upper" checked="checked" value="Top teeth only" data-val="true" data-val-required="The SelectedArch field is required.">
+                  <div class="teeth-type-details checkout-img-box-style smile-assessment-option active" onclick="ToggleArchSelected('upper', this)">
+                    <label for="archKey-upper" class="label-pointer">
+                      <div class="teeth-type-img img-width img-round">
+                        <img src="https://cdn.instasmile.com/new-website/images/teeth-images/top-teeth.png">
+                      </div>
+                      <div class="teeth-type-content">
+                        <p>Top teeth only</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                  <input type="radio" name="SelectedArch" class="d-none" id="archKey-lower" value="Bottom teeth only">
+                  <div class="teeth-type-details checkout-img-box-style smile-assessment-option" onclick="ToggleArchSelected('lower', this)">
+                    <label for="archKey-lower" class="label-pointer">
+                      <div class="teeth-type-img img-width img-round">
+                        <img src="https://cdn.instasmile.com/new-website/images/teeth-images/bottom-teeth.png">
+                      </div>
+                      <div class="teeth-type-content">
+                        <p>Bottom teeth only</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row check-2-inner-row-3 check-2-inner-row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                  <input type="radio" name="SelectedArch" class="d-none" id="archKey-dual-1" value="Top and bottom teeth">
+                  <div class="teeth-type-details checkout-img-box-style smile-assessment-option" onclick="ToggleArchSelected('dual', this)">
+                    <label for="archKey-dual-1" class="label-pointer">
+                      <div class="teeth-type-img img-width img-round">
+                        <img src="https://cdn.instasmile.com/new-website/images/teeth-images/top-and-bottom-teeth.png">
+                      </div>
+                      <div class="teeth-type-content">
+                        <p>Top and bottom teeth</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                  <div class="teeth-discount-box checkout-img-box-style" style="pointer-events: none;background-color: #d3f9ff;">
+                    <div class="vertical-center teeth-discount-content">
+                      <text style="font-size: small;"><b>SAVE MORE!</b></text>
+                      <p>Automatically save an <b>additional 20% off</b> your order when you buy both top and bottom veneers together instead of buying them separately.</p>
+                    </div>
+                    <div class="teeth-discount-img img-width vertical-center">
+                      <img src="https://cdn.instasmile.com/new-website/images/checkout_icon_1.svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <span id="archValidation" class="text-danger field-validation-valid" data-valmsg-for="SelectedArch" data-valmsg-replace="true"></span>
+                </div>
+              </div>
+
+
+              <div class="" id="upper-teeth-missing-section">
+                <div class="row teeth-missing-title-row check-2-inner-row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <h2 class="checkout_h2">Do you have any top teeth missing?</h2>
+                    <p class="checkout-2-highlight"><img src="https://cdn.instasmile.com/new-website/images/order-submit-icon.png"><span>Include severely broken teeth where less than half of the tooth remains.</span></p>
+                  </div>
+                </div>
+                <div class="row teeth-missing-value-row check-2-inner-row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <input type="radio" name="IsUpperMissing" class="d-none" id="upper-true" value="true">
+                    <div class="teeth-type-value teeth-is-upper-missing checkout-img-box-style smile-assessment-option" onclick="ToggleTeethMissing('upper', true, this)">
+                      <label for="upper-true" class="label-pointer">
+                        <div class="teeth-type-img img-width img-round">
+                          <img src="https://cdn.instasmile.com/new-website/images/teeth-images/missing-top-teeth.png">
+                        </div>
+                        <div class="teeth-type-content">
+                          <p>Yes</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <input type="radio" name="IsUpperMissing" class="d-none" id="upper-false" value="false">
+                    <div class="teeth-type-value teeth-is-upper-missing checkout-img-box-style smile-assessment-option active" onclick="ToggleTeethMissing('upper', false, this)">
+                      <label for="upper-false" class="label-pointer">
+                        <div class="teeth-type-img img-width img-round">
+                          <img src="https://cdn.instasmile.com/new-website/images/teeth-images/top-teeth.png">
+                        </div>
+                        <div class="teeth-type-content">
+                          <p>No</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <span id="upperValidation" class="text-danger field-validation-valid" data-valmsg-for="IsUpperMissing" data-valmsg-replace="true"></span>
+                  </div>
+                </div>
+                <div class="row teeth-missing-details-row check-2-inner-row missing-teeth d-none" id="upper-missing-teeth">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <h2 class="checkout_h2">Select which top teeth are missing on the arch diagram</h2>
+                    <p>As standard, the veneer will clip onto teeth numbers 15 &amp; 25 for comfort. In some cases, we can clip onto teeth numbers 16 &amp; 26, but we cannot use teeth further back than these.</p>
+                  </div>
+                  <div class="teeth teeth-upper">
+                    <label for="tooth-upper-1" class="tooth tooth-1" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-1" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[0]" value="1">
+                    </label>
+                    <label for="tooth-upper-2" class="tooth tooth-2" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-2" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[1]" value="2">
+                    </label>
+                    <label for="tooth-upper-3" class="tooth tooth-3" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-3" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[2]" value="3">
+                    </label>
+                    <label for="tooth-upper-4" class="tooth tooth-4" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-4" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[3]" value="4">
+                    </label>
+                    <label for="tooth-upper-5" class="tooth tooth-5" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-5" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[4]" value="5">
+                    </label>
+                    <label for="tooth-upper-6" class="tooth tooth-6" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-6" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[5]" value="6">
+                    </label>
+                    <label for="tooth-upper-7" class="tooth tooth-7" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-7" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[6]" value="7">
+                    </label>
+                    <label for="tooth-upper-8" class="tooth tooth-8" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-8" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[7]" value="8">
+                    </label>
+                    <label for="tooth-upper-9" class="tooth tooth-9" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-9" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[8]" value="9">
+                    </label>
+                    <label for="tooth-upper-10" class="tooth tooth-10" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-10" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[9]" value="10">
+                    </label>
+                    <label for="tooth-upper-11" class="tooth tooth-11" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-11" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[10]" value="11">
+                    </label>
+                    <label for="tooth-upper-12" class="tooth tooth-12" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-12" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[11]" value="12">
+                    </label>
+                    <label for="tooth-upper-13" class="tooth tooth-13" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-13" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[12]" value="13">
+                    </label>
+                    <label for="tooth-upper-14" class="tooth tooth-14" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-14" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[13]" value="14">
+                    </label>
+                    <label for="tooth-upper-15" class="tooth tooth-15" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-15" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[14]" value="15">
+                    </label>
+                    <label for="tooth-upper-16" class="tooth tooth-16" onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-upper-16" data-val="true" data-val-required="The Boolean field is required." name="UpperMissingTeeth[15]" value="16">
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="d-none" id="lower-teeth-missing-section">
+                <div class="row teeth-missing-title-row  check-2-inner-row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <h2 class="checkout_h2">Do you have any bottom teeth missing?</h2>
+                    <p class="checkout-2-highlight"><img src="https://cdn.instasmile.com/new-website/images/order-submit-icon.png"><span>Include severely broken teeth where less than half of the tooth remains.</span></p>
+                  </div>
+                </div>
+                <div class="row teeth-missing-value-row check-2-inner-row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <input type="radio" name="IsLowerMissing" class="d-none" id="lower-true" value="true">
+                    <div class="teeth-type-value teeth-is-lower-missing checkout-img-box-style smile-assessment-option " onclick="ToggleTeethMissing('lower', true, this)">
+                      <label for="lower-true" class="label-pointer">
+                        <div class="teeth-type-img img-width img-round">
+                          <img src="https://cdn.instasmile.com/new-website/images/teeth-images/missing-bottom-teeth.png">
+                        </div>
+                        <div class="teeth-type-content">
+                          <p>Yes</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <input type="radio" name="IsLowerMissing" class="d-none" id="lower-false" value="false">
+                    <div class="teeth-type-value teeth-is-lower-missing checkout-img-box-style smile-assessment-option  active
+                                " onclick="ToggleTeethMissing('lower', false, this)">
+                      <label for="lower-false" class="label-pointer">
+                        <div class="teeth-type-img img-width img-round">
+                          <img src="https://cdn.instasmile.com/new-website/images/teeth-images/bottom-teeth.png">
+                        </div>
+                        <div class="teeth-type-content">
+                          <p>No</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <span id="lowerValidation" class="text-danger field-validation-valid" data-valmsg-for="IsLowerMissing" data-valmsg-replace="true"></span>
+                  </div>
+                </div>
+                <div class="row teeth-missing-details-row check-2-inner-row missing-teeth  d-none
+                            " id="lower-missing-teeth">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check-2-inner-clmn">
+                    <h2 class="checkout_h2">Select which bottom teeth are missing on the arch diagram</h2>
+                    <p>As standard, the veneer will clip onto teeth numbers 35 &amp; 45 for comfort. In some cases, we can clip onto teeth numbers 36 &amp; 46, but we cannot use teeth further back than these.</p>
+                  </div>
+                  <div class="teeth teeth-lower">
+                    <label for="tooth-lower-1" class="tooth tooth-1 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-1" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[0]" value="1">
+                    </label>
+                    <label for="tooth-lower-2" class="tooth tooth-2 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-2" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[1]" value="2">
+                    </label>
+                    <label for="tooth-lower-3" class="tooth tooth-3 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-3" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[2]" value="3">
+                    </label>
+                    <label for="tooth-lower-4" class="tooth tooth-4 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-4" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[3]" value="4">
+                    </label>
+                    <label for="tooth-lower-5" class="tooth tooth-5 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-5" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[4]" value="5">
+                    </label>
+                    <label for="tooth-lower-6" class="tooth tooth-6 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-6" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[5]" value="6">
+                    </label>
+                    <label for="tooth-lower-7" class="tooth tooth-7 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-7" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[6]" value="7">
+                    </label>
+                    <label for="tooth-lower-8" class="tooth tooth-8 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-8" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[7]" value="8">
+                    </label>
+                    <label for="tooth-lower-9" class="tooth tooth-9 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-9" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[8]" value="9">
+                    </label>
+                    <label for="tooth-lower-10" class="tooth tooth-10 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-10" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[9]" value="10">
+                    </label>
+                    <label for="tooth-lower-11" class="tooth tooth-11 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-11" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[10]" value="11">
+                    </label>
+                    <label for="tooth-lower-12" class="tooth tooth-12 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-12" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[11]" value="12">
+                    </label>
+                    <label for="tooth-lower-13" class="tooth tooth-13 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-13" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[12]" value="13">
+                    </label>
+                    <label for="tooth-lower-14" class="tooth tooth-14 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-14" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[13]" value="14">
+                    </label>
+                    <label for="tooth-lower-15" class="tooth tooth-15 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-15" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[14]" value="15">
+                    </label>
+                    <label for="tooth-lower-16" class="tooth tooth-16 " onmouseup="UpdateLabel(this)">
+                      <input type="checkbox" id="tooth-lower-16" data-val="true" data-val-required="The Boolean field is required." name="LowerMissingTeeth[15]" value="16">
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row teeth-next-btn-row check-2-inner-row submit-button-spacing">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 checkout-next-btn check-2-inner-clmn">
+                  <button class="btn btn-primary check-active-btn" type="submit">Next step <i class="fas fa-chevron-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<script>
+  $('#submitArch').on('submit',function(e){
+    e.preventDefault();
+    var form_data = $(this).serializeArray();
+      console.log(form_data);
+    var object = {};
+    object['UpperMissingTeeth'] = "";
+    object['LowerMissingTeeth'] = "";
+   
+    form_data.forEach(function(value, key){
+      var value_v = value.name;
+      var object_key = object[key];
+     
+      if(isNaN(value.value)){
+      object[value.name] = value.value;
+      }else{
+        if(value_v.includes("UpperMissingTeeth")){
+            object['UpperMissingTeeth'] += value.value +",";
+        }else if(value_v.includes("LowerMissingTeeth")){
+            object['LowerMissingTeeth'] += value.value +",";
+        
+        }
+      }
+    });
+    var json = JSON.stringify(object);
+     console.log(json);
+    $.cookie("form_data",json);
+    
+    location.href='/pages/products'
+  });
+</script>

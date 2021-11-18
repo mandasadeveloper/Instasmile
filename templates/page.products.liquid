@@ -1,0 +1,346 @@
+{% include "p-top-1" %}
+{% include "p-top-2" %}
+{% include "p-top-3" %}
+<style>
+  #shopify-section-header_main, #shopify-section-announcement-bar, #shopify-section-top-bar{
+    display:none;
+  }
+</style>
+{% assign product_1 = all_products["instasmile-classic"] %}
+{% assign product_2 = all_products["instasmile-dynamic"] %}
+<section class="checkout-step page-template checkout–step-3-page sa-products-page">
+
+
+  <section class="checkout-step-sec show-desktop">
+    <div class="container">
+      <div class="step-border-div"></div>
+      <div class="row check-out-step-row">
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+            Suitability </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+            Your teeth </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  active
+                    ">
+            Products </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+            Your details </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="checkout-step-sec show-mobile checkout-step-sec-mob">
+    <div class="back-arrow-mobile">
+      <a onclick="ToggleLoading();" href="/pages/smile-assessment-step-2">
+        <img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+      </a>
+    </div>
+    <div class="container">
+      <div class="step-border-div"></div>
+      <div class="row check-out-step-row">
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  active
+                    ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+        <div class="col col-1-5 step-clmn">
+          <a class="step-name  ">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="checkout-tittle-sec ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 back-btn-clmn show-desktop">
+          <a class="btn-back-go " onclick="ToggleLoading();" href="/pages/smile-assessment-step-2">
+            <img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+            Back
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 checkout-title-clmn">
+          <h1>Which Instasmile is right for you?</h1>
+        </div>
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="checkout-3-sec-1 checkout-section">
+    <div class="container">
+      <div class="row check-3-row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check-3-clmn-first">
+          <form method="post" id="addtocart">
+            <div class="check-3-content checkout-common-box">
+
+              <div class="row check-3-inner-row-1">
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                  <input type="radio" name="SelectedProduct" class="d-none" id="classic" value="{{product_1.selected_or_first_available_variant.id}}" data-val="true" data-val-required="The SelectedProduct field is required.">
+                  <div class="checkout-img-box-style sa-datails  " onclick="SetActive('sa-datails', this)">
+                    <label for="classic" class="label-pointer">
+                      <div class="sa-prdt-details">
+                        <div class="sa-prdt-title"><h3>{{product_1.title}}</h3></div>
+                        <div class="sa-prdt-btn"><a>{{product_1.price | money}}</a></div>
+                      </div>
+                      <div class="sa-prdt-img img-width"><img src="{{product_1.featured_media.preview_image | img_url:"master"}}"></div>
+                      {{product_1.description}}
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                  <input type="radio" name="SelectedProduct" class="d-none" id="dynamic" value="{{product_2.selected_or_first_available_variant.id}}" checked="checked">
+                  <div class="checkout-img-box-style sa-datails  active
+                              " onclick="SetActive('sa-datails', this)">
+                    <label for="dynamic" class="label-pointer">
+                      <div class="sa-prdt-details">
+                        <div class="sa-prdt-title"><h3>{{product_2.title}}</h3></div>
+                        <div class="sa-prdt-btn"><a>{{product_2.price | money}}</a></div>
+                      </div>
+                      <div class="sa-prdt-img img-width"><img src="{{product_2.featured_media.preview_image | img_url:"master"}}"></div>
+                      {{product_2.description}}
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+                <div class="col-12">
+                  <span id="spanProductValidation" class="text-danger field-validation-valid" data-valmsg-for="SelectedProduct" data-valmsg-replace="true"></span>
+                </div>
+              </div>
+
+
+              <div class="row check-3-inner-row-title">
+                <div class="col-12">
+                  <h2 class="checkout_h2">Choose your shade</h2>
+                </div>
+              </div>
+              <div class="row check-3-inner-row-2" style="padding-bottom: 30px;">
+
+                <div class="col-12 show-desktop">
+
+                  <div class="row check-3-inner-depth-1">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 check-3-clmn-left">
+                      <input type="radio" name="Shade" class="d-none" id="bl1" value="BL1 - Hollywood White" checked="checked" data-val="true" data-val-required="The SelectedShade field is required.">
+                      <div class="sa-shade-details checkout-img-box-style active" onclick="SetActive('sa-shade-details', this)">
+                        <label for="bl1" class="label-pointer">
+                          <div class="sa-shade-img img-width img-round">
+                            <img src="https://cdn.instasmile.com/new-website/images/sa-shades/bl1.jpg">
+                          </div>
+                          <div class="sa-shade-content">
+                            <h3 class="checkout-h3">BL1 - Hollywood White</h3>
+                            <p>This is our whitest and brightest shade that gives the appearance of whitened teeth.</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 check-3-clmn-right">
+                      <input type="radio" name="Shade" class="d-none" id="a1" value="A1 - Pure Natural White">
+                      <div class="sa-shade-details checkout-img-box-style " onclick="SetActive('sa-shade-details', this)">
+                        <label for="a1" class="label-pointer">
+                          <div class="sa-shade-img img-width img-round">
+                            <img src="https://cdn.instasmile.com/new-website/images/sa-shades/a1.jpg">
+                          </div>
+                          <div class="sa-shade-content">
+                            <h3 class="checkout-h3">A1 - Pure Natural White</h3>
+                            <p>A whiter shade than your average smile. Naturally, this is the whitest a tooth can be.</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row check-3-inner-depth-1-2">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 check-3-clmn-left">
+                      <input type="radio" name="Shade" class="d-none" id="a2" value="A2 - Light Ivory">
+                      <div class="sa-shade-details checkout-img-box-style " onclick="SetActive('sa-shade-details', this)">
+                        <label for="a2" class="label-pointer">
+                          <div class="sa-shade-img img-width img-round">
+                            <img src="https://cdn.instasmile.com/new-website/images/sa-shades/a2.jpg">
+                          </div>
+                          <div class="sa-shade-content">
+                            <h3 class="checkout-h3">A2 - Light Ivory</h3>
+                            <p>Light ivory is a common color for teeth that haven’t undergone any whitening treatment.</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 check-3-clmn-right">
+                      <input type="radio" name="Shade" class="d-none" id="a3" value="A3 - Medium Ivory">
+                      <div class="sa-shade-details checkout-img-box-style " onclick="SetActive('sa-shade-details', this)">
+                        <label for="a3" class="label-pointer">
+                          <div class="sa-shade-img img-width img-round">
+                            <img src="https://cdn.instasmile.com/new-website/images/sa-shades/a3.jpg">
+                          </div>
+                          <div class="sa-shade-content">
+                            <h3 class="checkout-h3">A3 - Medium Ivory</h3>
+                            <p>Medium ivory is a slightly darker shade than A2 to maintain a natural tone.</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 show-mobile mobile-shade-type">
+
+                  <div class="row check-3-inner-depth-1">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 check-3-clmn-left">
+                      <input type="radio" name="Shade" class="d-none" id="bl1" value="BL1 - Hollywood White" checked="checked">
+                      <div class="smile-shade-mobile active" onclick="SetActive('smile-shade-mobile', this)">
+                        <label for="bl1" class="label-pointer">
+                          <div class="sa-shade-details checkout-img-box-style">
+                            <div class="sa-shade-img img-width img-round">
+                              <img src="https://cdn.instasmile.com/new-website/images/sa-shades/bl1.jpg">
+                            </div>
+                            <div class="sa-shade-content">
+                              <h3 class="checkout-h3">BL1 - Hollywood White</h3>
+                            </div>
+                          </div>
+                          <p>This is our whitest and brightest shade that gives the appearance of whitened teeth.</p>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 check-3-clmn-right">
+                      <input type="radio" name="Shade" class="d-none" id="a1" value="A1 - Pure Natural White">
+                      <div class="smile-shade-mobile " onclick="SetActive('smile-shade-mobile', this)">
+                        <label for="a1" class="label-pointer">
+                          <div class="sa-shade-details checkout-img-box-style">
+                            <div class="sa-shade-img img-width img-round">
+                              <img src="https://cdn.instasmile.com/new-website/images/sa-shades/a1.jpg">
+                            </div>
+                            <div class="sa-shade-content">
+                              <h3 class="checkout-h3">A1 - Pure Natural White</h3>
+                            </div>
+                          </div>
+                          <p>A whiter shade than your average smile. Naturally, this is the whitest a tooth can be.</p>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 check-3-clmn-left">
+                    <input type="radio" name="Shade" class="d-none" id="a2" value="A2 - Light Ivory">
+                    <div class="smile-shade-mobile " onclick="SetActive('smile-shade-mobile', this)">
+                      <label for="a2" class="label-pointer">
+                        <div class="sa-shade-details checkout-img-box-style">
+                          <div class="sa-shade-img img-width img-round">
+                            <img src="https://cdn.instasmile.com/new-website/images/sa-shades/a2.jpg">
+                          </div>
+                          <div class="sa-shade-content">
+                            <h3 class="checkout-h3">A2 - Light Ivory</h3>
+                          </div>
+                        </div>
+                        <p>Light ivory is a common color for teeth that haven’t undergone any whitening treatment.</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 check-3-clmn-right">
+                    <input type="radio" name="Shade" class="d-none" id="a3" value="A3 - Medium Ivory">
+                    <div class="smile-shade-mobile " onclick="SetActive('smile-shade-mobile', this)">
+                      <label for="a3" class="label-pointer">
+                        <div class="sa-shade-details checkout-img-box-style">
+                          <div class="sa-shade-img img-width img-round">
+                            <img src="https://cdn.instasmile.com/new-website/images/sa-shades/a3.jpg">
+                          </div>
+                          <div class="sa-shade-content">
+                            <h3 class="checkout-h3">A3 - Medium Ivory</h3>
+                          </div>
+                        </div>
+                        <p>Medium ivory is a slightly darker shade than A2 to maintain a natural tone.</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-12">
+                <span id="spanShadeValidation" class="text-danger field-validation-valid" data-valmsg-for="Shade" data-valmsg-replace="true"></span>
+              </div>
+
+              <div class="row check-3-inner-row-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 checkout-next-btn">
+                  <button id="nextButton" class="btn btn-primary check-active-btn" type="submit">Next step <i class="fas fa-chevron-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </form></div>
+      </div>
+      <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Bhkg-7CQSdIqEh2R-uLkBNLoBaWiRrMEBICaQYQXkQIwmSuKTbtnb-4JPjh0Q_VcHLysT7Ssj49GopdSGJIMW6zzxQDL5IFI2F4TsKzsuSnizF282v372gF41xQBX4Ji3hvaaHAT9HrRWvOlcYYWm0">
+    </div>
+
+
+  </section>
+
+</section>
+
+<script>
+  $('#addtocart').on('submit',function(e){
+    e.preventDefault();
+    var form_data = $(this).serializeArray();
+   
+   var data_previous = JSON.parse($.cookie("form_data"));
+    
+    var properties = {};
+    properties[form_data[1].name] = form_data[1].value;
+    $.each(data_previous, function(propName, propVal) {
+     
+//     properties[propVal.name] = propVal.value;
+    
+    });
+    
+    
+       Object.assign(properties, data_previous);
+     console.log(properties);
+    
+    var params = {
+         quantity: 1,
+         id: form_data[0].value,
+         properties:properties
+       }
+    $.ajax({
+      type: "POST",
+      url: '/cart/clear.js',
+      success: function(){
+        $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          dataType: 'json',
+          data: params,
+          properties:{
+            'personal message': properties
+          },
+          success: function(){
+              document.location.href = '/cart';
+          },
+          error: function(){}
+        });
+      },
+      dataType: 'json'
+    });
+   
+  });
+</script>

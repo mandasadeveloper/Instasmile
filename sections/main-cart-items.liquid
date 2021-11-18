@@ -1,0 +1,274 @@
+
+{% include "p-top-1" %}
+{% include "p-top-2" %}
+{% include "p-top-3" %}
+<style>
+  #shopify-section-header_main, #shopify-section-announcement-bar, #shopify-section-top-bar{
+    display:none;
+  }
+  #promo_code_submit{
+   display:none!important;
+  }
+</style>
+
+<section class="checkout-step page-template checkout–step-4-page">
+<section class="checkout-step-sec show-desktop">
+<div class="container">
+<div class="step-border-div"></div>
+<div class="row check-out-step-row">
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+Suitability </a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+Your teeth </a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+Products </a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  active
+ ">
+Your details </a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="checkout-step-sec show-mobile checkout-step-sec-mob">
+<div class="back-arrow-mobile">
+<a onclick="ToggleLoading();" href="/pages/products">
+<img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+</a>
+</div>
+<div class="container">
+<div class="step-border-div"></div>
+<div class="row check-out-step-row">
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  active
+ ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="checkout-tittle-sec ">
+<div class="container">
+<div class="row">
+<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 back-btn-clmn show-desktop">
+<a class="btn-back-go " onclick="ToggleLoading();" href="/pages/products">
+<img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+Back
+</a>
+</div>
+<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 checkout-title-clmn">
+<h1>Your custom clip-on veneers are one step away</h1>
+</div>
+<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+</div>
+</div>
+</section>
+
+<section class="checkout-4-sec-1 checkout-section">
+<div class="container">
+<div class="row justify-content-center">
+
+
+
+
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 checkout-sec-1-clmn checkout-sec-1-clmn-2 checkout-second-clmn">
+<div class="order-summary-sec">
+  <form method="post" action="/checkout">
+<div class="row os-row os-row-1">
+<div class="col-lg-12 col-md-12 col-sm-12-col-xs-12">
+<h2 class="checkout_h2">Your Order</h2>
+<div class="order-summary-images ss-person-images">
+<div id="owl-demo" class="owl-carousel owl-theme owl-loaded owl-drag">
+
+
+
+
+<div class="owl-stage-outer"><div class="owl-stage" style="transition: all 0s ease 0s; width: 2971px; transform: translate3d(-742px, 0px, 0px);"><div class="owl-item" style="width: 742.675px;"><div class="item">
+<img src="https://cdn.instasmile.com/new-website/images/sa-full-face-shades/bl1-1.jpg">
+</div></div><div class="owl-item active center" style="width: 742.675px;"><div class="item">
+<img src="https://cdn.instasmile.com/new-website/images/sa-full-face-shades/bl1-4.png">
+</div></div><div class="owl-item" style="width: 742.675px;"><div class="item">
+<img src="https://cdn.instasmile.com/new-website/images/sa-full-face-shades/bl1-3.png">
+</div></div><div class="owl-item" style="width: 742.675px;"><div class="item">
+<img src="https://cdn.instasmile.com/new-website/images/sa-full-face-shades/bl1-2.png">
+</div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-chevron-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fas fa-chevron-right"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+</div>
+<script type="text/javascript">
+    /* Start Story Image Slider Js */
+    $(document).ready(function () {
+        $(".ss-person-images #owl-demo").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            center: true,
+            slideSpeed: 300,
+            loop: false,
+            nav: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            autoplayHoverPause: true,
+            items: 1
+        });
+    });
+                /* End Story Image Slider Js */
+</script>
+</div>
+</div>
+<div class="row os-row os-row-2">
+  {%- for item in cart.items -%}
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 order-s-clmn order-s-clmn-1">
+<p>{{item.title}}</p>
+  {%- for property in item.properties -%}
+  {%- assign property_first_char = property.first | slice: 0 -%}
+   {%- if property.last != 'true' -%}
+  {%- if property.last != blank or property.last != 'true' -%}
+  {% if property.first == "SelectedArch" %}
+  <p><b>{{property.last}}</b></p>
+  {% else %}
+  <p>{{ property.first }}: {{property.last}}</p>
+   {%- endif -%}
+  {%- endif -%}
+  {% endif %}
+  {%- endfor -%}
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 order-s-clmn order-s-clmn-2">
+  {% if item.image %}
+  <img src="{{ item.image | img_url: 'master' }}">
+  {% endif %}
+
+</div>
+  {% endfor %}
+</div>
+<div class="row os-row os-row-3">
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 order-s-clmn order-s-edit">
+<a class="btn btn-edit-section" onclick="ToggleLoading();" role="button" href="/smile-assessment-step-2">Edit selection</a>
+</div>
+</div>
+<div class="row checkout-subtotal-row os-row">
+<div class="col-md-12 col-sm-12">
+  {%- for item in cart.items -%}
+<div class="checkout-1-price-div">
+<div class="checkout-1-price-t">Price</div>
+<div class="checkout-1-price">{{item.price | money}}</div>
+<div class="checkout-1-price-t"><b>12 Month Warranty <span style="font-size: smaller;">(worth $150 included)</span></b></div>
+<div class="checkout-1-price">$0.00</div>
+<div class="checkout-1-price-t"><b>Express Manufacturing <span style="font-size: smaller;">(worth $150 included)</span></b></div>
+<div class="checkout-1-price">$0.00</div>
+</div>
+  {% endfor %}
+</div>
+</div><div class="row promo-code-row os-row">
+<div class="col-md-12 col-sm-12">
+<p class="text-danger small"><i class="fas fa-info-circle"></i><strong> Promo codes cannot be used with Payment Plans</strong></p>
+<div class="promo-code-clm col-lg-12">
+<div class="promo_code_label">
+<label>Promo code</label>
+</div>
+<div class="promo_code_field">
+<input type="text" id="promo_code_input" name="discount" class="input-field" placeholder="Enter Here">
+</div>
+<div class="promo-next show-mobile" id="promo_code_submit">
+<a class="btn btn-promo-code" onclick="UpdatePromoCode(this)" role="button" style="color: white;font-size: 14px;padding: 2px 4px;">
+Apply
+</a>
+</div>
+<div class="promo-code-price show-desktop" id="promo_code_submit">
+<a class="btn btn-promo-code" onclick="UpdatePromoCode(this)" role="button" style="color: white;">
+Apply
+</a>
+</div>
+</div>
+<div class="promo-error-message"></div>
+</div>
+</div>
+<div class="row checkout-total-row os-row">
+<div class="col-md-12 col-sm-12">
+<div class="checkout-total">
+<div class="checkout-total-title">Total</div>
+<div class="checkout-total-price">{{cart.total_price | money}}</div>
+</div>
+</div>
+</div>
+<div class="row checkout-payment-option os-row justify-content-center">
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/icons-merchants/icon-merchant-visa.svg" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/icons-merchants/icon-merchant-mastercard.svg" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/icons-merchants/icon-merchant-amex.svg" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/pay-in-full-icons/icon-merchant-discover.png" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/pay-in-full-icons/icon-merchant-dc.png" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/pay-in-full-icons/icon-merchant-jcb.png" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/icons-merchants/icon-merchant-partially.svg" style="max-width: 60%;">
+</div>
+<div class="col-md-3 col-sm-3 visa-clmn payment-option-clmn" style="padding-bottom: 5px;">
+<img src="https://cdn.instasmile.com/new-website/images/spread-the-cost-icons/icon-merchant-zip.png" style="max-width: 60%;">
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<div class="row checkout-budget-row os-row">
+<div class="col-md-9 col-sm-8 col-xs-8 budget-clmn budget-content">
+<p>With a range of payment plans to suit your budget, the smile you want is more affordable than you might think.</p>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-4 budget-clmn budget-icon">
+<img src="https://cdn.instasmile.com/new-website/images/budget_icon.svg">
+</div>
+</div>
+</div>
+</div>
+
+<div class="row payment-next-step">
+<div class="col-lg-12 ">
+<div class="insta-addon-div">
+<div class="insta-addon-div_con vertical-center"><p>Confirm add-ons and your preferred payment option on the next step.</p></div>
+<div class="insta_addon_img"><img src="https://cdn.instasmile.com/new-website/images/checkout_icon_1.svg"></div>
+</div>
+</div>
+<div class="col-lg-12 vertical-center mt-3">
+<div class="payment-nex-div"><button class="btn btn-primary payment-next-btn" type="submit" >Proceed to payment<i class="fas fa-chevron-right"></i></button></div>
+</div>
+</div>
+  </form>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+  </section>

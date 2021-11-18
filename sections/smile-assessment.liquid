@@ -1,0 +1,155 @@
+{% include "p-top-1" %}
+{% include "p-top-2" %}
+{% include "p-top-3" %}
+<style>
+   #shopify-section-header_main, #shopify-section-announcement-bar, #shopify-section-top-bar{
+    display:none;
+  }
+</style>
+<section class="checkout-step page-template checkout–step-1-page suitability-page">
+
+
+<section class="checkout-step-sec show-desktop">
+<div class="container">
+<div class="step-border-div"></div>
+<div class="row check-out-step-row">
+<div class="col col-1-5 step-clmn">
+<a class="step-name  active
+ ">
+Suitability </a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+Your teeth </a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+Products </a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+Your details </a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="checkout-step-sec show-mobile checkout-step-sec-mob">
+<div class="back-arrow-mobile">
+<a onclick="ToggleLoading();" href="/">
+<img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+</a>
+</div>
+<div class="container">
+<div class="step-border-div"></div>
+<div class="row check-out-step-row">
+<div class="col col-1-5 step-clmn">
+<a class="step-name  active
+ ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+<div class="col col-1-5 step-clmn">
+<a class="step-name  ">
+</a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="checkout-tittle-sec  checkout-1-title-sec
+">
+<div class="container">
+<div class="row">
+<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 back-btn-clmn show-desktop">
+<a class="btn-back-go  btn
+" onclick="ToggleLoading();" href="/">
+<img src="https://cdn.instasmile.com/new-website/images/button-back.svg">
+Back
+</a>
+</div>
+<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 checkout-title-clmn">
+<h1>Welcome to your Smile Assessment</h1>
+</div>
+<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+</div>
+</div>
+</section>
+
+
+
+<section class="checkout-1-sec-1 checkout-section">
+<div class="container">
+<div class="row check-1-row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check-1-clmn">
+<div class="checkout-1-content">
+
+<div class="row checkout-1-inner-row-1 checkout-1-inner-row">
+<div class="col-lg-12 col-sm-12 col-xs-12 checkout-1-inner-clmn">
+<h2 class="checkout_h2">Do any of these statements apply to you?</h2>
+<p>I suffer from an oral health issue such as gum disease or severe gum recession</p>
+<p>I wear a fixed retainer or braces</p>
+<p>I am undergoing dental treatment</p>
+<p>I have loose teeth/crowns/veneers</p>
+</div>
+</div>
+
+
+<div class="row checkout-1-inner-row-2 checkout-1-inner-row" style="padding-bottom: 20px;">
+<div class="col-lg-6 col-sm-12 col-xs-12 checkout-1-inner-clmn check-1-btn-left">
+<div class="check-1-left-btn checkout-1-btn">
+<label class="col-12">
+<div class="btn" role="button" onclick="location.href='/pages/checkout-unsuitable'">
+<input value="false" name="IsSuitable" hidden="" type="radio" data-val="true" data-val-required="The IsSuitable field is required." id="IsSuitable">
+<span class="btn-value">Yes</span>
+<span class="btn-content">At least 1 of these statements apply to me</span>
+</div>
+</label>
+</div>
+</div>
+<form method="post" name="suitabilityForm" action="/checkout/healthcheck">
+<div class="col-lg-6 col-sm-12 col-xs-12 checkout-1-inner-clmn">
+<div class="check-1-left-btn checkout-1-btn">
+<label class="col-12">
+<div class="btn" id="submitButton" role="button" style="padding-right: 55px;" onclick="location.href='/pages/smile-assessment-step-2'">
+<input value="true" name="IsSuitable" hidden="" type="radio" data-val="true" data-val-required="The IsSuitable field is required." id="IsSuitable">
+<span class="btn-value">No</span>
+<span class="btn-content" style="padding-left: 20px;">None of these statements apply to me</span>
+</div>
+</label>
+</div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8Bhkg-7CQSdIqEh2R-uLkBPD2kcww0ifLTDBiytYoEDNwTMSU9J25vz2TcBLCImbhKBuVE47yUMr8fiaOsCDe5rhcss72TTrFUy7_GjwnhvhM2dOCUCVzUz8BM4MnQCwOLTXEXzuzK6WTkOhNeNiabc"></form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</section>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,126 @@
+<form enctype="multipart/form-data" action="/contact/contactform" method="post">
+<div class="form-row">
+<div class="form-group col-lg-6 field-correct">
+<div class="form_label"><label class="control-label" for="FirstName">First Name</label></div>
+<input name="FirstName" type="text" id="FirstName" class="form-control input-field" placeholder="" data-val="true" data-val-required="First name is required" value="">
+ <span class="text-danger field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group col-lg-6 field-correct">
+<div class="form_label"><label class="control-label" for="LastName">Last Name</label></div>
+<input name="LastName" type="text" id="LastName" class="form-control input-field field-correct" placeholder="" data-val="true" data-val-required="Last name is required" value="">
+<span class="text-danger field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-lg-6 field-correct">
+<div class="form_label"><label class="control-label" for="MobileNumber">Mobile Number</label></div>
+<input name="MobileNumber" type="tel" id="MobileNumber" class="form-control input-field" placeholder="" data-val="true" data-val-phone="The Mobile Number field is not a valid phone number." data-val-required="You must provide a mobile number" value="">
+<span class="text-danger field-validation-valid" data-valmsg-for="MobileNumber" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group field-error col-lg-6 field-correct">
+<div class="form_label"><label class="control-label" for="Email">Email address</label></div>
+<input name="Email" type="email" id="Email" class="form-control input-field" placeholder="" data-val="true" data-val-email="Invalid Email Address" data-val-required="The email address is required" value="">
+<span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+</div>
+</div>
+<h2 class="commo_form_h2 commo_form_h2_second">Your enquiry</h2>
+<div class="form-row">
+<div class="form-group col-lg-6">
+<div class="form_label"><label class="control-label" for="EnquiryType">Type of enquiry</label></div>
+<input id="formIdField" hidden type="text" name="FormId" value="" />
+<input type="text" class=" d-none
+ form-control input-field" id="amISuitableInput" placeholder="Am I Suitable?" readonly disabled />
+<input type="text" class=" d-none
+ form-control input-field" id="impressionsInput" placeholder="Help with Impressions" readonly disabled />
+<select id="type_of_enquiry" placeholder="Contact Preference" class="" data-val="true" data-val-required="Type of enquiry is required" name="EnquiryType">
+<option value="">-- Please select your contact reason --</option>
+<option>General enquiry</option>
+<option>Am I suitable?</option>
+<option>Change my order</option>
+<option>Help with Impressions</option>
+<option>I need more materials</option>
+<option>Order Status / Tracking / Delivery</option>
+<option>Activation Call</option>
+<option>Product issue / Defect</option>
+<option>Cancel my order</option>
+<option>Unauthorised purchase</option>
+<option>Other</option>
+</select>
+<span class="text-danger field-validation-valid" data-valmsg-for="EnquiryType" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-lg-12 field-correct">
+<div class="form_label"><label class="control-label" for="Message">Message</label></div>
+<textarea name="Message" rows="10" cols="30" class="form-control input-field" placeholder="" data-val="true" data-val-required="Message is required" id="Message"></textarea>
+<span class="text-danger field-validation-valid" data-valmsg-for="Message" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-row">
+<div class="modal fade" id="fileUploadModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Upload Images</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true" class="close">×</span>
+</button>
+</div>
+<div class="modal-body">
+<div class="form-group">
+ <div class="row py-3">
+<div class="col-12">
+<div>
+<label class="custom-file-label" id="fileLabel">
+Choose file(s)...
+<input name="Files" id="fileInput" accept=".jpg, .png, .gif, .jpeg, .bmp, .svg" onchange="FileUploadUpdateList()" type="file" class="form-control custom-file-input" multiple>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+<p>Selected File(s):</p>
+<div class="fileList"></div>
+</div>
+<div class="col-6">
+<p>Accepted File(s):</p>
+<ul>
+<li>Max overall size: 20MB</li>
+<li>.png</li>
+<li>.jpeg</li>
+<li>.jpg</li>
+<li>.gif</li>
+<li>.bmp</li>
+<li>.svg</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-danger" data-dismiss="modal">Confirm</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    $("#fileUploadModal").on('show.bs.modal', function () {
+        FileUploadUpdateList();
+    });
+</script>
+<div id="addImagesBtn" class="pl-2">
+<p class="photo-select-menu image-align-text mt-0 pt-0">
+<img class="" src="https://cdn.instasmile.com/new-website/images/photo-select-icon.svg" data-toggle="modal" data-target="#fileUploadModal" />
+<span data-toggle="modal" data-target="#fileUploadModal">Select photos to upload</span>
+</p>
+<p class="pl-1">Selected File(s):</p>
+<div class="fileList"></div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-lg-12 field-correct enquiry-submit-btn form-btn-common">
+<button type="submit" value="Send">Send</button>
+</div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8Bhkg-7CQSdIqEh2R-uLkBPfD4_SIxkemVGgDpHxvLRRczqnwZbD2RLVnTulO7gyiVjdrfBJr79ifHWBL0OVOvzEjIpo_K1iMVeYlPAyzAgIYgUYFgJEYnn8yVx2jukWxJLbyLRNIAp5gLntGwdGL18" /></form>

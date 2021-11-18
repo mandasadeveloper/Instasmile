@@ -1,0 +1,329 @@
+<section class="contact-page page-template">
+  
+
+<section class="section_padding con-sec-1">
+<div class="container">
+  
+   {%- form 'contact', id: 'ContactForm' -%}
+    {%- if form.posted_successfully? -%}
+  <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
+    <div class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+      <strong>Thank you for submitting your enquiry!</strong> A support representative will be reviewing your request shortly and will send you a personal response within 48 business hours, thank you for your patience.
+    </div>
+  </div>
+    {%- endif -%}
+  {% endform %}
+  
+  
+<div class="row con-sec-1-title">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+<h1>How can we help you today?</h1>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center con-sec-1-clmn label-pointer">
+<a class="showGetInTouchButton">
+<div id="amISuitable" class="con-type-box ">
+<div class="con-type-img"><img src="https://cdn.instasmile.com/new-website/images/con-icon-4.svg"></div>
+<div class="con-type-title">Am I suitable?</div>
+</div>
+</a>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center con-sec-1-clmn label-pointer">
+<a class="showGetInTouchButton">
+<div id="orderHelp" class="con-type-box ">
+<div class="con-type-img"><img src="https://cdn.instasmile.com/new-website/images/con-icon-2.svg"></div>
+<div class="con-type-title">Help with my order</div>
+</div>
+</a>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center con-sec-1-clmn label-pointer">
+<a class="showGetInTouchButton">
+<div id="impressionsHelp" class="con-type-box ">
+<div class="con-type-img"><img src="https://cdn.instasmile.com/new-website/images/con-icon-3.svg"></div>
+<div class="con-type-title">Help with my impressions</div>
+</div>
+</a>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center con-sec-1-clmn label-pointer">
+<a class="showGetInTouchButton">
+<div id="getInTouch" class="con-type-box ">
+<div class="con-type-img"><img src="https://cdn.instasmile.com/new-website/images/con-icon-1.svg"></div>
+<div class="con-type-title">Get in touch</div>
+</div>
+</a>
+</div>
+</div>
+
+<div id="getInTouchDiv" class="row get-in-touch-row" style="display: none;">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center get-in-touch-clmn">
+<h2>Get in touch with an expert at Instasmile</h2>
+<div class="con-live-chat con-get-btn"><a id="liveChatButton" class="btn btn-primary" href="javascript:void(0)" onclick="window.fcWidget.open();window.fcWidget.show();" role="button">Live Chat</a></div>
+ <div class="con-get-btn con-inqury-btn"><a id="sendEnquiryButton" class="btn btn-primary" href="javascript:void(0)" role="button">Send an enquiry</a></div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="sendEnquiryDiv" class="con-inquiry-sec-2" style="display: none; margin-top: -60px;">
+<div class="container">
+
+<div class="row get-in-form-row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 get-in-form-clmn commo-form-clmn">
+<h2 class="commo_form_h2">Your details</h2>
+  {% include 'contact-us-ff' %}
+  
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section_padding">
+<div class="container">
+
+
+
+
+
+ 
+
+
+<div class="row news-title-row con-common-title">
+<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 con-half-clmn">
+<h2>FAQs</h2>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 con-half-btn">
+<div class="con-btn-common"><a class="btn btn-primary" href="/faqs" role="button">View all</a></div>
+</div>
+</div>
+<div class="row faqs-row show-desktop">
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 faqs-clmn">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/what-is-instasmile">What is instasmile?</a></li>
+<li><a href="/blogs/news/what-is-instasmile-made-from">What is instasmile made from?</a></li>
+<li><a href="/blogs/news/what-is-the-difference-between-the-classic-and-dynamic-instasmile-2">What is the difference between the Classic and Dynamic instasmile?</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 faqs-clmn">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/what-is-instasmile-made-from">What is instasmile made from?</a></li>
+<li><a href="/blogs/news/can-i-still-buy-the-platinum-product">Can I still buy the Platinum product?</a></li>
+<li><a href="/blogs/news/why-do-you-no-longer-offer-straighter-or-natural-designs">Why do you no longer offer straighter or natural designs?</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 faqs-clmn">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/what-is-the-difference-between-the-classic-and-dynamic-instasmile-2">What is the difference between the Classic and Dynamic instasmile?</a></li>
+<li><a href="/blogs/news/why-do-you-no-longer-offer-straighter-or-natural-designs">Why do you no longer offer straighter or natural designs?</a></li>
+<li><a href="/blogs/news/will-it-damage-my-own-teeth">Will it damage my own teeth?</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 faqs-clmn">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/can-i-still-buy-the-platinum-product">Can I still buy the Platinum product?</a></li>
+<li><a href="/blogs/news/do-i-need-to-see-a-dentist">Do I need to see a dentist?</a></li>
+<li><a href="/blogs/news/can-i-kiss-with-them-in">Can I kiss with them in?</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="row faqs-row-mobile show-mobile">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 faqs-clmn contact-slider">
+<div id="owl-demo" class="owl-carousel owl-theme">
+<div class="item">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/what-is-instasmile">What is instasmile?</a></li>
+<li><a href="/blogs/news/what-is-instasmile-made-from">What is instasmile made from?</a></li>
+<li><a href="/blogs/news/what-is-the-difference-between-the-classic-and-dynamic-instasmile-2">What is the difference between the Classic and Dynamic instasmile?</a></li>
+</ul>
+</div>
+</div>
+<div class="item">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/what-is-instasmile-made-from">What is instasmile made from?</a></li>
+<li><a href="/blogs/news/can-i-still-buy-the-platinum-product">Can I still buy the Platinum product?</a></li>
+<li><a href="/blogs/news/why-do-you-no-longer-offer-straighter-or-natural-designs">Why do you no longer offer straighter or natural designs?</a></li>
+</ul>
+</div>
+</div>
+<div class="item">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/what-is-the-difference-between-the-classic-and-dynamic-instasmile-2">What is the difference between the Classic and Dynamic instasmile?</a></li>
+<li><a href="/blogs/news/why-do-you-no-longer-offer-straighter-or-natural-designs">Why do you no longer offer straighter or natural designs?</a></li>
+<li><a href="/blogs/news/will-it-damage-my-own-teeth">Will it damage my own teeth?</a></li>
+</ul>
+</div>
+</div>
+<div class="item">
+<div class="faq-content">
+<ul>
+<li><a href="/blogs/news/can-i-still-buy-the-platinum-product">Can I still buy the Platinum product?</a></li>
+<li><a href="/blogs/news/do-i-need-to-see-a-dentist">Do I need to see a dentist?</a></li>
+<li><a href="/blogs/news/can-i-kiss-with-them-in">Can I kiss with them in?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<script async src="{{ 'instagram-embed.js' | asset_url }}"></script>
+<script type="text/javascript">
+    /* Start Contact Slider Section */
+    $(document).ready(function () {
+        $(".contact-slider #owl-demo").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            items: 1,
+        });
+      
+      
+      
+    });
+    /* End Contact Slider Section */
+</script>
+  
+  
+<script>
+    $('.showGetInTouchButton').click(function () {
+        $('#sendEnquiryDiv').hide();
+        $('#getInTouchDiv').show();
+
+        $('html, body').animate({
+            scrollTop: $('#getInTouchDiv').offset().top - 20
+        }, 'slow');
+
+        // Reset suitable logic
+        ToggleSuitableAction();
+
+        // Set not active for all actions
+        $('.showGetInTouchButton').find('div:first').removeClass('active');
+
+        // Set inner div to active for selected action
+        $(this).find('div:first').addClass('active');
+    });
+
+    $('#sendEnquiryButton').click(function () {
+        // Get ID of active div
+        var id = $('.showGetInTouchButton').find('.active')[0].id;
+
+        ToggleSuitableAction(id);
+
+        $('#sendEnquiryDiv').show();
+        $('html, body').animate({
+            scrollTop: $('#sendEnquiryDiv').offset().top - 20
+        }, 'slow');
+    });
+
+    $('#liveChatButton').click(function () {
+        $('#sendEnquiryDiv').hide();
+    });
+
+    function ToggleSuitableAction(id = '') {
+        $('#formIdField').val(id);
+
+        if (id === 'amISuitable') {
+            // Show pre-selected input
+            $('#amISuitableInput').removeClass('d-none');
+
+            // Set select list value and hide select input
+            $('#type_of_enquiry').addClass('d-none');
+            $('#type_of_enquiry').val('Am I suitable?');
+
+            /*$('#addImagesBtn').prop('disabled', false).show();*/
+        }
+        else if (id === 'impressionsHelp') {
+            // Show pre-selected input
+            $('#impressionsInput').removeClass('d-none');
+
+            // Reset select list value and show select input
+            $('#type_of_enquiry').addClass('d-none');
+            $('#type_of_enquiry').val('Help with Impressions');
+
+            $('#fileInput').val('');
+            $('.fileList').empty();
+            /*$('#addImagesBtn').prop('disabled', true).hide();*/
+        }
+        else {
+            // Hide pre-selected input
+            $('#amISuitableInput').addClass('d-none');
+            $('#impressionsInput').addClass('d-none');
+
+            // Reset select list value and show select input
+            $('#type_of_enquiry').removeClass('d-none');
+            $('#type_of_enquiry').val('');
+
+            $('#fileInput').val('');
+            $('.fileList').empty();
+            /*$('#addImagesBtn').prop('disabled', true).hide();*/
+        }
+    }
+
+
+</script>
+
+<!-- <script>
+  $(document).ready(function(){
+    $('a#liveChatButton').click(function(){
+      $("#tidio-chat").trigger("click");
+
+    });
+  });
+</script>   -->
+
+<!--   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o+ok+t/SAKlL5mvXLr0OXNi1Hp">
+    </script>
+  <script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022/lib/jquery-validation/dist/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o\u002Bok\u002Bt/SAKlL5mvXLr0OXNi1Hp\u0022\u003E\u003C/script\u003E"));</script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.9/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha384-ifv0TYDWxBHzvAk2Z0n8R434FL1Rlv/Av18DXE43N/1rvHyOG4izKst0f2iSLdds">
+    </script>
+<script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-ifv0TYDWxBHzvAk2Z0n8R434FL1Rlv/Av18DXE43N/1rvHyOG4izKst0f2iSLdds\u0022\u003E\u003C/script\u003E"));</script>
+  <script src="{{ 'requiredif.js' | asset_url }}" ></script>
+ -->
+
+{% schema %}
+  {
+    "name": "Contact us",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

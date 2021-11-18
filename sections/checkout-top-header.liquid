@@ -1,0 +1,173 @@
+<section class="checkout-top-header show-desktop">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 checkou-header-clmn-1 checkou-header-clmn">
+<div class="checkout-header-left">
+<a class="navbar-brand" href="/"><img src="https://cdn.instasmile.com/new-website/images/logo-instasmile-strapline-black.svg" class="img-fluid" alt="instasmile"></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 checkou-header-clmn-2 checkou-header-clmn vertical-center">
+<div class="checkout-header-center">
+<p><img class="top-star-img" src="https://cdn.instasmile.com/new-website/images/Footer_Star.svg" />3,705 customers rate us GREAT</a></p>
+</div>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 checkou-header-clmn-3 checkou-header-clmn vertical-center">
+<div class="menu-right-content vertical-center">
+<ul>
+<li><div class="" data-toggle="modal" data-target="#globe-modal" style="display: none;"><i class="fas fa-globe"></i></div></li>
+<li class="user_login_icon">
+<i class="fas fa-bars"></i><i class="fas fa-user-circle"></i>
+<div class="container account-dropdown-container">
+<div class="user-login-details account-dropdown">
+<ul class="account-dropdown-menu menu-item-alignment">
+<li><a href="/orders">Orders</a></li>
+<li><a href="/account">Account Details</a></li>
+<li>
+<form id="logoutForm" method="post" action="/auth/logout">
+<a href="#" onclick="document.getElementById('logoutForm').submit();">Sign Out</a>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8Bhkg-7CQSdIqEh2R-uLkBMqt03o5qXOufEXbay82gZSCc_vZ1iSWpWonLl-y3GI0i-fq9vRJdR_EaB7mEiaei5roZFfbTwjyatNz9ImaLyuibORlMBTVhRlrtNvhyG4wgLI64BQeXCJ5oUZnlaR8ldGjnSOfHe9v7xcoad7iFaKeyyf3ZgxvKFbOKZfrm5cPA" /></form>
+</li>
+</ul>
+</div>
+</div>
+</li>
+
+<div class="modal fade globe-modal" id="globe-modal" tabindex="-1" aria-labelledby="lang-modal-label" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<div class="language-lightbox">
+<div class="container">
+<div class="lang-lightbox-div">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 light-box-clmn">
+<div><h2>Select your region</h2></div>
+<button type="button" class="close lang-modal-close-btn" data-dismiss="modal" aria-hidden="true">&times; </button>
+</div>
+</div>
+<div class="row lightbox-lang-row">
+<div class="col-1-5">
+<a href="https://uk.instasmile.com/orders/">
+<input type="radio" name="archKey" class="d-none" id="archKey-dual" value="dual">
+<div class="lang-div">
+<label for="archKey-dual" style="pointer-events: none">
+<div class="contry-flag"><img src="https://cdn.instasmile.com/new-website/images/united-kingdom-flag.svg"></div>
+<div class="contry-name"><p>UK</p></div>
+</label>
+</div>
+</a>
+</div>
+<div class="col-1-5">
+<a class="active" href="https://us.instasmile.com/orders/">
+<input type="radio" name="archKey" class="d-none" id="archKey-dual" value="dual">
+<div class="lang-div">
+<label for="archKey-dual" style="pointer-events: none">
+<div class="contry-flag"><img src="https://cdn.instasmile.com/new-website/images/united-states-of-america-flag.svg"></div>
+<div class="contry-name"><p>USA</p></div>
+ </label>
+</div>
+</a>
+</div>
+<div class="col-1-5">
+<a href="https://au.instasmile.com/orders/">
+<input type="radio" name="archKey" class="d-none" id="archKey-dual" value="dual">
+<div class="lang-div">
+<label for="archKey-dual" style="pointer-events: none">
+<div class="contry-flag"><img src="https://cdn.instasmile.com/new-website/images/australia-flag.svg"></div>
+<div class="contry-name"><p>Australia</p></div>
+</label>
+</div>
+</a>
+</div>
+<div class="col-1-5">
+<a href="https://ie.instasmile.com/orders/">
+<input type="radio" name="archKey" class="d-none" id="archKey-dual" value="dual">
+ <div class="lang-div">
+<label for="archKey-dual" style="pointer-events: none">
+<div class="contry-flag"><img src="https://cdn.instasmile.com/new-website/images/ireland-flag.svg"></div>
+<div class="contry-name"><p>Ireland</p></div>
+</label>
+</div>
+</a>
+</div>
+<div class="col-1-5">
+<a href="https://ca.instasmile.com/orders/">
+<input type="radio" name="archKey" class="d-none" id="archKey-dual" value="dual">
+<div class="lang-div">
+<label for="archKey-dual" style="pointer-events: none">
+<div class="contry-flag"><img src="https://cdn.instasmile.com/new-website/images/canada-flag.svg"></div>
+<div class="contry-name"><p>Canada</p></div>
+</label>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+{% include 'mobile-drawer' %}
+
+<section id="mobile-menu-nav" class="mobile-menu">
+<div class="row mobile-inner-row-1">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<p><img class="top-star-img" src="https://cdn.instasmile.com/new-website/images/Footer_Star.svg" />3,705 customers rate us GREAT</a></p>
+</div>
+</div>
+<div class="row mobile-inner-row-2">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mobile-inner-clmn-1">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mobile-inner-clmn-2 vertical-center">
+<a class="navbar-brand" href="/"><img src="https://cdn.instasmile.com/new-website/images/logo-instasmile-mobile.svg" class="img-fluid" alt="instasmile"></a>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mobile-inner-clmn-3 vertical-center">
+<div class="mobile-right-content vertical-center">
+<ul>
+<li><a href="/" style="color: #14181e;"><i class="fas fa-globe"></i></a></li>
+<li class="user_login_icon-mobile"><i class="fas fa-user-circle"></i></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mobile-clmn-menu mobile-menu-icon">
+<ul class="menu-item-mobile menu-item-mobile-1">
+<li><a href="/orders">Orders</a></li>
+<li><a href="#">Account Details</a></li>
+<li><a href="#">Sign Out</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
